@@ -231,7 +231,8 @@ function addAlert(msg) {
         geometry: {
             type: 'Point',
             coordinates: [json.lng, json.lat]
-        }
+        },
+        key: json.key
     });
     var dataSet = new mapv.DataSet(data);
     var level = json.lvl;
@@ -242,7 +243,7 @@ function addAlert(msg) {
         globalCompositeOperation: 'lighter',
         methods: {
             click: function (item) {
-                alert(item);
+                window.location.href="http://www.7drlb.com/dp/"+item.key;
             }
         },
         size: 5,
@@ -253,5 +254,5 @@ function addAlert(msg) {
 
     setTimeout(function() {
         mapvLayer.hide();
-    }, 60*1000);
+    }, 3*60*1000);
 }
