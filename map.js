@@ -217,8 +217,8 @@ function addAlert(longitude, latitude) {
 }
 */
 
-var _color1 = ["rgba(255, 255, 0, 0.6)", "rgba(255, 165, 0, 0.6)", "rgba(255, 0, 0, 0.6)"];
-var _color2 = ["rgba(255, 255, 0, 1)", "rgba(255, 165, 0, 1)", "rgba(255, 0, 0, 1)"];
+var _color1 = ["rgba(255, 255, 0, 0.6)", "rgba(255, 0, 255, 0.6)", "rgba(255, 0, 0, 0.6)"];
+var _color2 = ["rgba(255, 255, 0, 1)", "rgba(255, 0, 255, 1)", "rgba(255, 0, 0, 1)"];
 
 function addAlert(msg) {
     var json = JSON.parse(msg);

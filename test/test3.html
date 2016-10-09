@@ -29,7 +29,7 @@
 <canvas id="canvas"></canvas>
 
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1XjLLEhZhQNUzd93EjU5nOGQ"></script>
-<script type="text/javascript" src="../mapv.min.js"></script>
+<script type="text/javascript" src="../mapv.js"></script>
 
 <script type="text/javascript">
 
@@ -183,7 +183,7 @@
     var dataSet = new mapv.DataSet(data);
 
     var options = {
-        fillStyle: 'rgba(55, 50, 250, 0.2)',
+        fillStyle: 'rgba(255, 0, 0, 0.6)',
         globalCompositeOperation: "lighter",
         methods: {
             click: function (item) {
@@ -199,7 +199,7 @@
             },
             steps: 10,
             trails: 10,
-            duration: 1.5,
+            duration: 1.5
         },
         draw: 'simple'
     }
@@ -265,7 +265,7 @@
     ];
 
     for(var i=0;i<datas.length;i++){
-        getBoundary(datas[i]);
+        //getBoundary(datas[i]);
     }
 </script>
 
