@@ -215,10 +215,6 @@ function addAlert(longitude, latitude) {
     var mapvLayer = new mapv.baiduMapLayer(map, dataSet, options);
     mapvLayer.show();
 }
-
-function removeAlert(longitude, latitude) {
-
-}
 */
 
 var _color1 = ["rgba(255, 255, 0, 0.6)", "rgba(255, 165, 0, 0.6)", "rgba(255, 0, 0, 0.6)"];
@@ -232,6 +228,7 @@ function addAlert(msg) {
             type: 'Point',
             coordinates: [json.lng, json.lat]
         },
+        time: 3,
         key: json.key
     });
     var dataSet = new mapv.DataSet(data);
@@ -247,6 +244,16 @@ function addAlert(msg) {
             }
         },
         size: 5,
+        animation: {
+            type: 'time',
+            stepsRange: {
+                start: 0,
+                end: 10
+            },
+            steps: 10,
+            trails: 10,
+            duration: 1.5
+        },
         draw: 'simple'
     };
     var mapvLayer = new mapv.baiduMapLayer(map, dataSet, options);
